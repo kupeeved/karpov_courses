@@ -10,7 +10,6 @@ from schema import FeedGet, PostGet, UserGet
 
 app = FastAPI()
 
-
 def get_user_by_id(db: Session, id: int) -> User:
     return db.query(User).filter(User.id == id).one_or_none()
 
